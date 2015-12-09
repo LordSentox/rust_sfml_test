@@ -1,0 +1,10 @@
+[package]
+name = "rust_sfml_test"
+version = "0.1.0"
+authors = ["Arne Dussin <arne.dussin@live.de>"]
+
+[dependencies.sfml]
+git="https://github.com/jeremyletang/rust-sfml"
+
+[dependencies.rand]
+rand="*"
