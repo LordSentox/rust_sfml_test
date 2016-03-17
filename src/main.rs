@@ -1,57 +1,51 @@
-//! Example from SFML: Pong
-
 extern crate sfml;
 extern crate rand;
 
+use sfml::graphics::{Color, RenderTarget, RenderWindow, Sprite};
+use sfml::window::{Key, VideoMode, event, window_style, ContextSettings};
+
 mod texture_manager;
-
-use sfml::graphics::{RenderWindow, Color, Font, RenderTarget};
-use sfml::window::{VideoMode, ContextSettings, event, window_style, Key};
-use sfml::system::Clock;
-
-const GAME_WIDTH: u32 = 800;
-const GAME_HEIGHT: u32 = 600;
-const FULLSCREEN: bool = false;
-const USE_VSYNC: bool = true;
+use texture_manager::TextureManager;
 
 fn main() {
-	let style = if FULLSCREEN {
-		window_style::FULLSCREEN
-	} else {
-		window_style::CLOSE
-	};
+    // コンスタントを作る。
+    let game_width: u32 = 440;
+    let game_height: u32 = 440;
 
-	// Create the window of the application
-	let mut window: RenderWindow = RenderWindow::new(
-		VideoMode::new_init(GAME_WIDTH, GAME_HEIGHT, 32),
-		"SFML Pong",
-		style,
-		&ContextSettings::default()).unwrap();
+    // アプリのウインドーを作る。
+    let mut window = RenderWindow::new(VideoMode::new_init(game_width, game_height, 32),
+                                       "SFML Pong",
+                                       window_style::CLOSE,
+                                       &ContextSettings::default())
+                         .unwrap();
+    window.set_vertical_sync_enabled(true);
 
-	window.set_vertical_sync_enabled(USE_VSYNC);
+    // 画をロードしてる
+    let mut texture_manager = TextureManager::new();
 
-	let mut clock = Clock::new();
+    let sprite = Sprite::new_with_texture(texture_manager.find("resources/frank.jpeg").unwrap()).unwrap();
 
-	while window.is_open() {
-		println!("Frametime: {}", clock.restart().as_seconds());
+    loop {
+        for event in window.events() {
+            match event {
+                event::Closed => return,
+                event::KeyPressed { code, .. } => {
+                    match code {
+                        Key::Escape => return,
+                        _ => {}
+                    }
+                }
+                _ => {}
+            }
+        }
 
-		for event in window.events() {
-			match event {
-				event::Closed => window.close(),
-				event::KeyPressed{code, ..} => match code {
-					Key::Escape => {
-						window.close();
-						break;
-					},
-					_  => {}
-				} ,
-				_ => {}
-			}
-		}
-		// Clear the window
-		window.clear(&Color::new_rgb(50, 200, 50));
+        // Clear the window
+        window.clear(&Color::new_rgb(50, 200, 50));
 
-		// Display things on screen
-		window.display()
-	}
+        window.draw(&sprite);
+
+        // Display things on screen
+        window.display()
+    }
+
 }

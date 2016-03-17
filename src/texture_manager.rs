@@ -23,7 +23,7 @@ impl TextureManager {
 		};
 
 		// As a default setting, the smoothness is turned off, since I found anti-aliasing to be
-		// quite problematic in many situations.
+		// quite problematic in many situations, especially animation.
 		texture.set_smooth(false);
 
 		// To avoid errors in development, this is double checked, to prevent textures from being

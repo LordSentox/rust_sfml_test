@@ -2,115 +2,94 @@
 name = "rust_sfml_test"
 version = "0.1.0"
 dependencies = [
- "rand 0.3.12 (registry+https://github.com/rust-lang/crates.io-index)",
- "sfml 0.9.4 (git+https://github.com/jeremyletang/rust-sfml)",
-]
-
-[[package]]
-name = "advapi32-sys"
-version = "0.1.2"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-dependencies = [
- "winapi 0.2.5 (registry+https://github.com/rust-lang/crates.io-index)",
- "winapi-build 0.1.1 (registry+https://github.com/rust-lang/crates.io-index)",
+ "rand 0.3.14 (registry+https://github.com/rust-lang/crates.io-index)",
+ "sfml 0.11.1 (git+https://github.com/jeremyletang/rust-sfml)",
 ]
 
 [[package]]
 name = "bitflags"
-version = "0.3.3"
+version = "0.5.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 
 [[package]]
 name = "csfml-audio-sys"
 version = "0.1.0"
-source = "git+https://github.com/jeremyletang/rust-sfml#a759282971924880c2571b72e6069a3eee1b31d2"
+source = "git+https://github.com/jeremyletang/rust-sfml#643ec60a3bd65d112dd370379ca8470c229dca18"
 dependencies = [
  "csfml-system-sys 0.1.0 (git+https://github.com/jeremyletang/rust-sfml)",
- "libc 0.2.2 (registry+https://github.com/rust-lang/crates.io-index)",
+ "libc 0.2.8 (registry+https://github.com/rust-lang/crates.io-index)",
  "sfml-types 0.1.0 (git+https://github.com/jeremyletang/rust-sfml)",
 ]
 
 [[package]]
 name = "csfml-graphics-sys"
 version = "0.1.0"
-source = "git+https://github.com/jeremyletang/rust-sfml#a759282971924880c2571b72e6069a3eee1b31d2"
+source = "git+https://github.com/jeremyletang/rust-sfml#643ec60a3bd65d112dd370379ca8470c229dca18"
 dependencies = [
  "csfml-system-sys 0.1.0 (git+https://github.com/jeremyletang/rust-sfml)",
- "csfml-window-sys 0.1.0 (git+https://github.com/jeremyletang/rust-sfml)",
- "libc 0.2.2 (registry+https://github.com/rust-lang/crates.io-index)",
+ "csfml-window-sys 0.1.1 (git+https://github.com/jeremyletang/rust-sfml)",
+ "libc 0.2.8 (registry+https://github.com/rust-lang/crates.io-index)",
  "sfml-types 0.1.0 (git+https://github.com/jeremyletang/rust-sfml)",
 ]
 
 [[package]]
 name = "csfml-network-sys"
 version = "0.1.0"
-source = "git+https://github.com/jeremyletang/rust-sfml#a759282971924880c2571b72e6069a3eee1b31d2"
+source = "git+https://github.com/jeremyletang/rust-sfml#643ec60a3bd65d112dd370379ca8470c229dca18"
 dependencies = [
  "csfml-system-sys 0.1.0 (git+https://github.com/jeremyletang/rust-sfml)",
- "libc 0.2.2 (registry+https://github.com/rust-lang/crates.io-index)",
+ "libc 0.2.8 (registry+https://github.com/rust-lang/crates.io-index)",
  "sfml-types 0.1.0 (git+https://github.com/jeremyletang/rust-sfml)",
 ]
 
 [[package]]
 name = "csfml-system-sys"
 version = "0.1.0"
-source = "git+https://github.com/jeremyletang/rust-sfml#a759282971924880c2571b72e6069a3eee1b31d2"
+source = "git+https://github.com/jeremyletang/rust-sfml#643ec60a3bd65d112dd370379ca8470c229dca18"
 dependencies = [
- "libc 0.2.2 (registry+https://github.com/rust-lang/crates.io-index)",
+ "libc 0.2.8 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
 [[package]]
 name = "csfml-window-sys"
-version = "0.1.0"
-source = "git+https://github.com/jeremyletang/rust-sfml#a759282971924880c2571b72e6069a3eee1b31d2"
+version = "0.1.1"
+source = "git+https://github.com/jeremyletang/rust-sfml#643ec60a3bd65d112dd370379ca8470c229dca18"
 dependencies = [
  "csfml-system-sys 0.1.0 (git+https://github.com/jeremyletang/rust-sfml)",
- "libc 0.2.2 (registry+https://github.com/rust-lang/crates.io-index)",
+ "libc 0.2.8 (registry+https://github.com/rust-lang/crates.io-index)",
  "sfml-types 0.1.0 (git+https://github.com/jeremyletang/rust-sfml)",
 ]
 
 [[package]]
 name = "libc"
-version = "0.2.2"
+version = "0.2.8"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 
 [[package]]
 name = "rand"
-version = "0.3.12"
+version = "0.3.14"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 dependencies = [
- "advapi32-sys 0.1.2 (registry+https://github.com/rust-lang/crates.io-index)",
- "libc 0.2.2 (registry+https://github.com/rust-lang/crates.io-index)",
- "winapi 0.2.5 (registry+https://github.com/rust-lang/crates.io-index)",
+ "libc 0.2.8 (registry+https://github.com/rust-lang/crates.io-index)",
 ]
 
 [[package]]
 name = "sfml"
-version = "0.9.4"
-source = "git+https://github.com/jeremyletang/rust-sfml#a759282971924880c2571b72e6069a3eee1b31d2"
+version = "0.11.1"
+source = "git+https://github.com/jeremyletang/rust-sfml#643ec60a3bd65d112dd370379ca8470c229dca18"
 dependencies = [
- "bitflags 0.3.3 (registry+https://github.com/rust-lang/crates.io-index)",
+ "bitflags 0.5.0 (registry+https://github.com/rust-lang/crates.io-index)",
  "csfml-audio-sys 0.1.0 (git+https://github.com/jeremyletang/rust-sfml)",
  "csfml-graphics-sys 0.1.0 (git+https://github.com/jeremyletang/rust-sfml)",
  "csfml-network-sys 0.1.0 (git+https://github.com/jeremyletang/rust-sfml)",
  "csfml-system-sys 0.1.0 (git+https://github.com/jeremyletang/rust-sfml)",
- "csfml-window-sys 0.1.0 (git+https://github.com/jeremyletang/rust-sfml)",
- "libc 0.2.2 (registry+https://github.com/rust-lang/crates.io-index)",
+ "csfml-window-sys 0.1.1 (git+https://github.com/jeremyletang/rust-sfml)",
+ "libc 0.2.8 (registry+https://github.com/rust-lang/crates.io-index)",
  "sfml-types 0.1.0 (git+https://github.com/jeremyletang/rust-sfml)",
 ]
 
 [[package]]
 name = "sfml-types"
 version = "0.1.0"
-source = "git+https://github.com/jeremyletang/rust-sfml#a759282971924880c2571b72e6069a3eee1b31d2"
-
-[[package]]
-name = "winapi"
-version = "0.2.5"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-
-[[package]]
-name = "winapi-build"
-version = "0.1.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
+source = "git+https://github.com/jeremyletang/rust-sfml#643ec60a3bd65d112dd370379ca8470c229dca18"
 
